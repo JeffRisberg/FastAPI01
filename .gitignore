@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 .idea/workspace.xml
+.idea/sonarlint
 
 .DS_Store
 
