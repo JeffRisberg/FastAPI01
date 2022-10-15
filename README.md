@@ -1,4 +1,4 @@
-### FastAPI01
+# FastAPI01
 
 Shows examples of using FastAPI
 
