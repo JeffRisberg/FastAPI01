@@ -24,6 +24,14 @@ class Item(BaseModel):
 
 app = FastAPI()
 
+item1 = Item(name="Furby1", price=6.66, tax=None)
+item2 = Item(name="Furby2", price=7.77, tax=None)
+item3 = Item(name="ActionFigure1", price=12.13, tax=None)
+item4 = Item(name="ActionFigure2", price=15.13, tax=None)
+
+
+fake_items_db = [item1, item2, item3, item4]
+
 origins = [
     "http://localhost",
     "http://localhost:8080",
@@ -71,8 +79,6 @@ async def read_user_me():
 async def read_user(user_id: str):
     return {"user_id": user_id}
 
-
-fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
