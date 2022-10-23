@@ -10,7 +10,8 @@ This is based on https://fastapi.tiangolo.com/tutorial/
 
 To run it:
 
-cd src uvicorn main:app --reload
+cd src 
+uvicorn main:app --reload
 
 Then send HTTP requests to localhost:8000, such as:
 
