@@ -33,12 +33,6 @@ def reset():
 
 def get_users():
     print("get_users")
-
-    print(User.query.all())
-    #[<User u'admin'>, <User u'guest'>]
-    print(User.query.filter_by(first_name='Bob').first())
-    # <User u'admin'>
-
     query = User.query
     resultSet = query.all()
     results = list(map(lambda u:
@@ -48,19 +42,6 @@ def get_users():
 
 
 def get_posts():
-    print("get_posts")
-
-    query = Category.query.options(joinedload('posts'))
-    for category in query:
-        print(category, category.posts)
-
-    py = Category.query.filter_by(name='Python').first()
-
-    query = Post.query.with_parent(py).filter(Post.title != "Snakes")
-    resultSet = query.all()
-
-    print(resultSet)
-
     query = Post.query.options(joinedload('category'))
     resultSet = query.all()
     results = list(map(lambda u:
