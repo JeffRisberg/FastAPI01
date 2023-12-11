@@ -10,7 +10,7 @@ This is based on https://fastapi.tiangolo.com/tutorial/
 
 To run it:
 
-cd src 
+cd src
 uvicorn main:app --reload
 
 Then send HTTP requests to localhost:8000, such as:
@@ -20,6 +20,8 @@ http://localhost:8000/
 http://localhost:8000/items
 
 http://localhost:8000/items/2
+
+http://localhost:8000/users/me
 
 http://localhost:8000/models/lenet
 
