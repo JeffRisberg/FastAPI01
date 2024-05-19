@@ -34,7 +34,7 @@ fake_items_db = [item1, item2, item3, item4]
 
 origins = [
     "http://localhost",
-    "http://localhost:8080",
+    "http://localhost:8000",
 ]
 
 app.add_middleware(
@@ -56,10 +56,11 @@ async def add_process_time_header(request: Request, call_next):
 
 @app.get("/models/{model_name}")
 async def get_model(model_name: ModelName):
+
     if model_name is ModelName.alexnet:
         return {"model_name": model_name, "message": "Deep Learning FTW!"}
 
-    if model_name.value == "lenet":
+    if model_name.value == ModelName.lenet:
         return {"model_name": model_name, "message": "LeCNN all the images"}
 
     return {"model_name": model_name, "message": "Have some residuals"}
