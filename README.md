@@ -6,6 +6,19 @@ It shows how to set up API endpoints.
 
 This is based on https://fastapi.tiangolo.com/tutorial/
 
+### Virtual Environment
+
+Set up and activate a virtual environment with the following commands:
+
+```bash
+rm -rf venv
+virtualenv -p python3.12 venv
+. ./venv/bin/activate
+
+pip install -U pip
+pip install -r requirements.txt
+```
+
 ## Running this
 
 To run it:
@@ -30,3 +43,10 @@ http://localhost:8000/models/lenet
 
 And now, go to http://127.0.0.1:8000/redoc.
 You will see the alternative automatic documentation (provided by ReDoc):
+
+
+### Close Venv
+
+```azure
+deactivate
+```
