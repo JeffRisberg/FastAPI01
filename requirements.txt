@@ -1,4 +1,4 @@
-fastapi==0.116.1
-starlette==0.47.3
-uvicorn[standard]==0.35.0
+fastapi==0.135.1
+starlette==1.0.0
+uvicorn[standard]==0.42.0
 requests==2.32.5
